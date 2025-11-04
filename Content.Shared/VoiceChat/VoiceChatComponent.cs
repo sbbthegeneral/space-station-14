@@ -10,4 +10,5 @@ namespace Content.Shared.VoiceChat;
 [AutoGenerateComponentState]
 public sealed partial class VoiceChatComponent : Component
 {
+
 }
