@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Content.Client.VoiceChat;
-internal class ClientVoiceChatSystem : EntitySystem
+public sealed class ClientVoiceChatSystem : EntitySystem
 {
 }

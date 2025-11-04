@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 namespace Content.Shared.VoiceChat;
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
-internal class VoiceChatComponent : Component
+public sealed partial class VoiceChatComponent : Component
 {
 }
