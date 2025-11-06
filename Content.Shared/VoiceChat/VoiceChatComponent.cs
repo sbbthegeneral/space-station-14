@@ -11,5 +11,5 @@ namespace Content.Shared.VoiceChat;
 [AutoGenerateComponentState]
 public sealed partial class VoiceChatComponent : Component
 {
-
+    public uint SampleRate = 44100;
 }
