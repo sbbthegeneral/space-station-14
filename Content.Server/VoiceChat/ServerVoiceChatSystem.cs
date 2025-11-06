@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenTK.Audio.OpenAL;
+using Content.Shared.GameTicking;
 
 namespace Content.Server.VoiceChat;
 public sealed class ServerVoiceChatSystem : EntitySystem
@@ -13,12 +14,17 @@ public sealed class ServerVoiceChatSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnJoinLobby);
+        //SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnJoinLobby);
+        
+        SubscribeLocalEvent<TickerLobbyStatusEvent>(OnJoinLobby);
     }
 
-    public void OnJoinLobby(PlayerJoinedLobbyEvent args)
+    public void OnJoinLobby(TickerLobbyStatusEvent args)
     {
-        
+        if (args.IsRoundStarted & args.YouAreReady)
+        {
+
+        }
     }
 
 }
